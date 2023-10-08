@@ -1,7 +1,7 @@
 sudo apt remove --auto-remove neovim
 sudo apt purge --auto-remove neovim
 sudo rm -rf ~/.config/nvim
-sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl do xygen
+sudo apt-get install cmake unzip ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl do xygen
 sudo apt-get install fd-find
 sudo apt-get install ripgrep
 sleep 20
