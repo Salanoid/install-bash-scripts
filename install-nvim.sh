@@ -1,16 +1,30 @@
 sudo apt remove --auto-remove neovim
 sudo apt purge --auto-remove neovim
 sudo rm -rf ~/.config/nvim
-sudo apt-get install cmake unzip ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl do xygen
-sudo apt-get install fd-find
-sudo apt-get install ripgrep
+
+sudo apt install fd-find
+sudo apt install ripgrep
+sudo apt install cmake
+sudo apt install gettext
+sudo apt install unzip
+sudo apt install ninja-build
+sudo apt install libtool
+sudo apt install libtool-bin
+sudo apt install autoconf
+sudo apt install automake
+sudo apt install g++
+sudo apt install pkg-config
+sudo apt install curl
+sudo apt install do
+sudo apt install xygen
+
 sleep 20
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
 sudo rm /usr/local/bin/nvim
 sudo rm -r /usr/local/share/nvim
-sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make CMAKE_BUILD_TYPE=Release
 sudo make install
 cd ..
 sudo rm -rf neovim
