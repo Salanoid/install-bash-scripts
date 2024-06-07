@@ -18,7 +18,6 @@ sudo apt install curl
 sudo apt install do
 sudo apt install xygen
 
-sleep 20
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
@@ -28,4 +27,8 @@ sudo make CMAKE_BUILD_TYPE=Release
 sudo make install
 cd ..
 sudo rm -rf neovim
-cd .
+cd -
+
+if [ ! -d "$HOME/.config/nvim" ]; then
+	git clone https://github.com/LazyVim/starter ~/.config/nvim
+fi
